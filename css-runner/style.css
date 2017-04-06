@@ -1,0 +1,59 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.bg {
+  height: 1120px;
+  width: 1343px;
+  background: url('./img/bg.png') no-repeat;
+  background-size: cover;
+}
+
+.man-wrapper {
+  position: absolute;
+  top: 0;
+  left: 644px;
+  width: 46px;
+  height: 75px;
+  animation: move 10s linear;
+  animation-fill-mode: forwards;
+}
+
+.man {
+  width: 46px;
+  height: 75px;
+  background: url('./img/sprite.png') no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  animation: run 1200ms steps(2) infinite;
+  animation-direction: alternate;
+}
+
+@keyframes run {
+  from { background-position: 0 0 }
+  to { background-position: -92px 0 }
+}
+
+@keyframes move {
+  0%  {
+    top: 0;
+    left: 644px;
+  }
+
+  20% {
+    top: 100px;
+    left: 644px;
+  }
+
+  100% {
+    top: 500px;
+    left: 644px;
+  }
+}
