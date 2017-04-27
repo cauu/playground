@@ -10,8 +10,8 @@ html, body {
 }
 
 .bg {
-  height: 1120px;
-  width: 1343px;
+  width: 1120px;
+  height: 1343px;
   background: url('./img/bg.png') no-repeat;
   background-size: cover;
 }
@@ -19,10 +19,10 @@ html, body {
 .man-wrapper {
   position: absolute;
   top: 0;
-  left: 644px;
+  left: 534px;
   width: 46px;
   height: 75px;
-  animation: move 10s linear;
+  animation: move 20s linear;
   animation-fill-mode: forwards;
 }
 
@@ -32,7 +32,7 @@ html, body {
   background: url('./img/sprite.png') no-repeat;
   background-size: cover;
   background-position: 0 0;
-  animation: run 1200ms steps(2) infinite;
+  animation: run 300ms steps(2) infinite;
   animation-direction: alternate;
 }
 
@@ -43,17 +43,18 @@ html, body {
 
 @keyframes move {
   0%  {
-    top: 0;
-    left: 644px;
+    transform: translate3d(0, 0, 0);
   }
 
-  20% {
-    top: 100px;
-    left: 644px;
+  10% {
+    transform: translate3d(0, 278px, 0);
+  }
+
+  15% {
+    transform: translate3d(-50px, 328px, 0) rotate3d(0, 0, 1, 90deg);
   }
 
   100% {
-    top: 500px;
-    left: 644px;
+    transform: translate3d(-280px, 328px, 0) rotate3d(0, 0, 1, 90deg);
   }
 }
